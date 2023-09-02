@@ -11,7 +11,6 @@ export const Basket = () => {
     </>
   )
 }
-
 const styles = StyleSheet.create({
   top:{
     width: '100%',
