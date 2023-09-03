@@ -2,11 +2,11 @@ import React from 'react'
 import { Top } from './components/Top'
 import { Details } from './components/Details'
 
-export const Basket = () => {
+export const Basket = ({ topo, detalhes}) => {
   return (
     <>
-      <Top/>
-      <Details/>
+      <Top {...topo}/>
+      <Details {...detalhes}/>
     </>
   )
 }

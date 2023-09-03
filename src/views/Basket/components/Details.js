@@ -4,21 +4,19 @@ import logo from '../../../../assets/logo.png'
 import { TextName } from '../../../components/Text'
 
 
-export const Details = () => {
+export const Details = ({ nome, logoFazenda, nomeFazenda, descricao, preco }) => {
   return (
     <>
     <View style={styles.BasketContainer}>
-        <TextName style={styles.name}>Cesta de Verduras</TextName>
+        <TextName style={styles.name}>{nome}</TextName>
         <View style={styles.farmContainer}>
-          <Image source={logo} style={styles.farmImage} />
-          <TextName style={styles.farmName}>Jenny Jack Farms</TextName>
+          <Image source={logoFazenda} style={styles.farmImage} />
+          <TextName style={styles.farmName}>{nomeFazenda}</TextName>
         </View>
         <TextName style={styles.description}>
-            Uma cesta com produtos selecionados
-            cuidadosamente da fazenda
-            direito para sua cozinha
+          {descricao}
         </TextName>
-        <Text style={styles.price}>AOA 40,00</Text>
+        <Text style={styles.price}>{preco}</Text>
       </View>
     </>
   )
