@@ -1,36 +1,26 @@
 import React from 'react'
 import { TextName } from '../../../components/Text'
-import { Image, StyleSheet, View } from 'react-native'
+import { FlatList, Image, StyleSheet, View } from 'react-native'
 
-export const Items = ({ titulo, lista}) => {
+export const Item = ({ item :{ nome, imagem } }) => {  
   return (
     <>
-      <TextName style={styles.title}>{titulo}</TextName>
-      {lista.map(({ nome, imagem, index}) => (
-        <View key={nome} style={styles.container}>
+      <View key={nome} style={styles.container}>
           <Image style={styles.image} source={imagem} />
           <TextName style={styles.name}>{ nome }</TextName>
-        </View>
-      ))}
+      </View>
     </>
   )
 }
 
 const styles = StyleSheet.create({
-  title: {
-    color: '#464646',
-    fontWeight: 'bold',
-    marginTop: 32,
-    marginBottom: 8,
-    fontSize: 20,
-    lineHeight: 32
-  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     borderBottomWidth: 1,
+    paddingVertical: 16,
+    marginHorizontal: 16,
     borderBottomColor: '#ECECEC',
-    paddingVertical: 16
   },
   image:{
     width: 46,

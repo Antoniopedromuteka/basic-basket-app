@@ -14,6 +14,7 @@ export default function App() {
   }
   return (
     <SafeAreaView
+      style={{flex: 1}}
       onLayout={onLayoutRootView}
     >
       <StatusBar/>
