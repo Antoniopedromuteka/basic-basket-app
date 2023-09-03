@@ -12,6 +12,7 @@ export const Top = ({ titulo }) => {
     </>
   )
 }
+
 const styles = StyleSheet.create({
   top:{
     width: '100%',
