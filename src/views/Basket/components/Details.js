@@ -7,7 +7,6 @@ import { TextName } from '../../../components/Text'
 export const Details = ({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) => {
   return (
     <>
-    <View style={styles.BasketContainer}>
         <TextName style={styles.name}>{nome}</TextName>
         <View style={styles.farmContainer}>
           <Image source={logoFazenda} style={styles.farmImage} />
@@ -20,7 +19,6 @@ export const Details = ({ nome, logoFazenda, nomeFazenda, descricao, preco, bota
         <TouchableOpacity style={styles.button}>
           <TextName style={styles.textButton}>{botao}</TextName>
         </TouchableOpacity>
-      </View>
     </>
   )
 }
