@@ -1,15 +1,47 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+
+import tomate from '../../assets/frutas/Tomate.png';
+import brocolis from '../../assets/frutas/Brócolis.png';
+import batata from '../../assets/frutas/Batata.png';
+import pepino from '../../assets/frutas/Pepino.png';
+import abobora from '../../assets/frutas/Abóbora.png';
 
 const cesta = {
-  topo:{
-    titulo: "Detalhe da cesta"
+  topo: {
+    titulo: "Detalhe da cesta",
   },
-  detalhes:{
+  detalhes: {
     nome: "Cesta de Verduras",
-    nomeFazenda: "Jenny Jack Farms",
     logoFazenda: logo,
-    descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direito para sua cozinha",
-    preco: "AOA 40,00"
+    nomeFazenda: "Jenny Jack Farm",
+    descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
+    preco: "R$ 40,00",
+    botao: "Comprar",
+  },
+  itens: {
+    titulo: "Itens da cesta",
+    lista: [
+      {
+        nome: "Tomate",
+        imagem: tomate,
+      },
+      {
+        nome: "Brócolis",
+        imagem: brocolis,
+      },
+      {
+        nome: "Batata",
+        imagem: batata,
+      },
+      {
+        nome: "Pepino",
+        imagem: pepino,
+      },
+      {
+        nome: "Abóbora",
+        imagem: abobora,
+      }
+    ]
   }
 }
 
