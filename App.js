@@ -1,21 +1,19 @@
 import { View, StatusBar, SafeAreaView } from 'react-native';
 import { Basket } from './src/views/basket';
-import { 
-  useFonts,
-  Montserrat_400Regular,
-  Montserrat_700Bold
-} from '@expo-google-fonts/montserrat'
+import * as SplashScreen from 'expo-splash-screen';
+import { UseLoadFonts } from './src/hooks/useLoadFonts';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [ myFonts ] = useFonts({
-    "MontserratRegular": Montserrat_400Regular,
-    "MontserratBold": Montserrat_700Bold
-  })
-
-  if(!myFonts) return <View/>
-
+  const { fontsLoaded, onLayoutRootView } = UseLoadFonts();
+  if(!fontsLoaded){
+    return null
+  }
   return (
-    <SafeAreaView>
+    <SafeAreaView
+      onLayout={onLayoutRootView}
+    >
       <StatusBar/>
       <Basket/>
     </SafeAreaView>

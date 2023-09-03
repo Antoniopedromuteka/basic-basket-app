@@ -1,25 +1,26 @@
 import React from 'react'
-import { Image, StyleSheet, Dimensions, Text, View } from 'react-native'
+import { Image, StyleSheet, Dimensions, View, Text } from 'react-native'
 import topo from '../../assets/topo.png'
 import logo from '../../assets/logo.png'
+import { TextName } from '../components/Text'
 
 const width = Dimensions.get('screen').width
 export const Basket = () => {
   return (
     <>
       <Image source={topo} style={styles.top}/>
-      <Text style={styles.title}>Detalhe da cesta</Text>
+      <Text style={styles.title} >Detalhe da cesta</Text>
       <View style={styles.BasketContainer}>
-        <Text style={styles.name}>Cesta de Verduras</Text>
+        <TextName style={styles.name}>Cesta de Verduras</TextName>
         <View style={styles.farmContainer}>
           <Image source={logo} style={styles.farmImage} />
-          <Text style={styles.farmName}>Jenny Jack Farms</Text>
+          <TextName style={styles.farmName}>Jenny Jack Farms</TextName>
         </View>
-        <Text style={styles.description}>
+        <TextName style={styles.description}>
             Uma cesta com produtos selecionados
             cuidadosamente da fazenda
             direito para sua cozinha
-        </Text>
+        </TextName>
         <Text style={styles.price}>AOA 40,00</Text>
       </View>
     </>
@@ -38,14 +39,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: 'white',
-    fontWeight: 'bold',
     padding: 16
   },
   name: {
     fontSize: 26,
     lineHeight: 42,
     color: '#464646',
-    fontFamily: 'Montserrat_700Bold'
+    fontWeight: 'bold'
   },
   BasketContainer:{
     paddingVertical: 8,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,
-    fontFamily: 'Montserrat_400Regular'
+    fontWeight: 'normal'
   },
   farmContainer:{
     flexDirection: 'row',
